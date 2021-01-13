@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="com.demo.action"/>
+    <bean id="cfg" class="net.xm.client.factory.Cfg">
+        <property name="uuid" value="e0534f3240274897821a126be19b6d46" />
+        <property name="appkey" value="0621ef206a1d4cafbe0c5545c3882ea8" />
+        <property name="appSercet" value="90f8bc17be2a425db6068c749dee4f5d" />
+        <property name="movedCard" value='2'/>
+    </bean>
+    <bean id="init" class="com.demo.ClientFactoryInit">
+        <property name="cfg" ref="cfg"></property>
+    </bean>
+
+</beans>

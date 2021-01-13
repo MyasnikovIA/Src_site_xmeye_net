@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Class-Path: mail.jar clinet.jar xmi18n.jar jta-1.1.jar activation.jar 
+ c3p0-0.9.1.jar ognl-3.0.6.jar antlr-2.7.6.jar dom4j-1.6.1.jar druid-1
+ .0.13.jar log4j-1.2.16.jar avassh_cms0.2.jar ehcache-2.9.0.jar ezmorp
+ h-1.0.6.jar commons-io-2.2.jar aopalliance-1.0.jar hibernate3.6.10.ja
+ r slf4j-api-1.7.7.jar commons-lang-2.4.jar commons-lang3-3.2.jar free
+ marker-2.3.19.jar javax.persistence.jar xwork-core-2.3.20.jar commons
+ -codec-1.10.jar jackson-core-2.7.2.jar json-lib-2.3-jdk15.jar javassi
+ st-3.11.0.GA.jar struts2-core-2.3.20.jar aspectjweaver-1.6.12.jar slf
+ 4j-log4j12-1.7.12.jar commons-logging-1.1.3.jar jackson-databind-2.7.
+ 2.jar urlrewritefilter-4.0.3.jar commons-beanutils-1.8.0.jar commons-
+ collections-3.1.jar commons-logging-api-1.1.jar commons-validator-1.3
+ .1.jar commons-fileupload-1.3.1.jar spring-tx-3.2.13.RELEASE.jar jack
+ son-annotations-2.7.2.jar spring-aop-3.2.13.RELEASE.jar spring-orm-3.
+ 2.13.RELEASE.jar spring-web-3.2.13.RELEASE.jar device-status-1.0-SNAP
+ SHOT.jar mchange-commons-java-0.2.7.jar spring-core-3.2.13.RELEASE.ja
+ r spring-jdbc-3.2.13.RELEASE.jar spring-beans-3.2.13.RELEASE.jar spri
+ ng-struts-3.2.13.RELEASE.jar struts2-spring-plugin-2.3.20.jar spring-
+ aspects-3.2.13.RELEASE.jar spring-context-3.2.13.RELEASE.jar mysql-co
+ nnector-java-5.0.8-bin.jar spring-expression-3.2.13.RELEASE.jar hiber
+ nate-jpa-2.0-api-1.0.1.Final.jar authorization-cloud-2.0.2-snapshots.
+ jar
+Main-Class: com.demo.action.Jar
+

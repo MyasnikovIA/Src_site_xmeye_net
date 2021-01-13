@@ -1,0 +1,205 @@
+
+html {
+    width: 100%;
+    height: 100%
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 22px;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font: 14px/1.5 "微软雅黑", arial;
+    color: #444;
+}
+
+/**个人信息--srar**/
+.personal_top {
+    width: 100%;
+    height: 8%;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold
+}
+
+.personal_box {
+    font-weight: bold;
+}
+
+.personal_box_top {
+    border-top: 1px #b7d2ff solid;
+}
+
+.personal_box tr {
+    height: 32px;
+    line-height: 32px;
+}
+
+.personal_box table {
+    text-align: left;
+    width: 100%;
+    /* margin-top: 3%;*/
+}
+
+.personal_box td {
+    color: #444;
+    border-right: 1px skyblue outset;
+    border-bottom: 1px skyblue outset;
+}
+
+.td_right {
+
+}
+
+.td_right input {
+    color: #444444;
+    font-size: 16px;
+    width: 100%;
+    margin-left: 0%;
+    /*background-color: lightblue;*/
+    border-left: 1px solid slategray;
+    border-top: 1px solid slategray;
+    border-right: 1px solid slategray;
+    background-color: lightgrey;
+}
+
+.select {
+    display: none;
+    margin-top: -30px;
+    position: fixed;
+    width: 79%;
+    border-right: 1px skyblue outset;
+    border-bottom: 1px skyblue outset;
+    background-color: white;
+}
+
+.sex_w {
+    margin-bottom: 1%;
+}
+
+.sex_m, .sex_w {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    border: none;
+
+}
+
+.update_img {
+
+    cursor: pointer;
+    display: none;
+    margin-right: 2%;
+    float: right;
+    width: 20px;
+    height: 30px;
+}
+
+.error_infor {
+    width: 100%;
+    text-align: center;
+    color: #ff0000;
+
+}
+
+.update, .yes_update {
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+.yes_update {
+    margin-left: 5%;
+    display: none;
+}
+
+.update_pass {
+    display: none
+}
+
+.update_pass li {
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.height_30 {
+    text-align: left;
+    height: 30px;
+    line-height: 30px
+}
+
+.height_32 {
+    text-align: left;
+    height: 30px;
+    line-height: 30px
+}
+
+.update_pass input {
+    vertical-align: middle;
+    float: right;
+    width: 80%;
+    height: 26px;
+    line-height: 26px;
+    background-color: white;
+}
+
+.personal_content_box table {
+    width: 100%;
+    margin-top: 5%;
+
+}
+
+.personal_content_box tr {
+    height: 30px;
+}
+
+.personal_content_box td {
+    text-align: left;
+    border: 1px skyblue outset;
+
+}
+
+.update_uname, .update_name, .update_sex, .update_tel, .update_address, .update_email {
+    float: left;
+    margin-left: 5%;
+    width: 60%;
+    /* background-color: white;*/
+}
+
+/*.input1, .input2, .select, .input3, .input4, .input5 {
+    position: absolute;
+    display: none;
+    left: 24%;
+    color: #444444;
+    font-size: 16px;
+    width: 60%;
+    *//*background-color: lightblue;*//*
+    border-left: 1px solid slategray;
+    border-top: 1px solid slategray;
+    border-right: 1px solid slategray;
+
+}*/
+
+.update_pass li {
+    width: 100%;
+    list-style: none;
+    margin-top: 1%;
+}
+
+.update_pass span {
+    float: left;
+    height: 100%;
+}
+
+/**个人信息--end**/

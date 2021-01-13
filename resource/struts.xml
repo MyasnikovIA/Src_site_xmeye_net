@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!--<constant name="struts.i18n.encoding" value="UTF-8"></constant>-->
+
+    <package name="xmcloud-demo" extends="struts-default">
+        <interceptors>
+            <interceptor name="login" class="com.demo.action.interceptor">
+            </interceptor>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="login"/>
+            </interceptor-stack>
+        </interceptors>
+        <global-results>
+            <result name="login">jsp/timeout.jsp</result>
+        </global-results>
+        <action name="userlogin" class="user" method="userlogin">
+        </action>
+        <action name="main" class="user" method="main">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <!--<result name="login">jsp/timeout.jsp</result>-->
+            <result name="success">jsp/index.jsp</result>
+        </action>
+        <!--注册-->
+        <action name="regeister" class="register" method="regeister"></action>
+        <!--注册-->
+
+
+
+        <!--发送验证码-->
+        <!--邮箱注册-->
+        <action name="mailsend" class="register" method="mailsend"></action>
+        <!--手机注册-->
+        <action name="phonesend" class="register" method="phonesend"></action>
+        <!--(找回、修改)密码  手机-->
+        <action name="findphonesend" class="user" method="findphonesend"></action>
+        <!--（找回、修改）密码  邮箱-->
+        <action name="findmailsend" class="user" method="findmailsend"></action>
+        <!--发送验证码-->
+
+
+        <!--找回密码-->
+        <action name="findpassword" class="user" method="findpassword"></action>
+        <!--找回密码-->
+
+
+        <!--修改密码-->
+
+<!--        <action name="updatebymail" class="update" method="updatebymail"></action>
+
+        <action name="updatebyphone" class="update" method="updatebyphone"></action>-->
+
+
+        <!--用户修改密码-->
+        <action name="updatebyname" class="update" method="updatebyname"></action>
+
+
+
+        <!--获取用户信息-->
+        <!--通过userId获取-->
+        <action name="usermessage" class="update" method="usermessage">
+            <interceptor-ref name="myStack"></interceptor-ref>
+        </action>
+        <!--通过名字和密码获取-->
+        <action name="namemesage" class="update" method="namemesage">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <result name="success">jsp/user.jsp</result>
+        </action>
+        <!--用户退出-->
+        <action name="userExit" class="user" method="userExit">
+            <result name="success">index.jsp</result>
+        </action>
+
+        <!--设备-->
+        <!--设备列表-->
+        <action name="list" class="device" method="list">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <result name="success">jsp/device.jsp</result>
+        </action>
+        <!--授权设备列表-->
+        <action name="listcode" class="device" method="listcode">
+            <interceptor-ref name="myStack"></interceptor-ref>
+        </action>
+
+        <action name="add" class="device" method="add">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <result type="redirectAction">list</result>
+        </action>
+        <action name="delete" class="device" method="delete">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <result type="redirectAction">list</result>
+        </action>
+        <action name="update" class="device" method="update">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <result type="redirectAction">list</result>
+        </action>
+        <action name="updatepwd" class="device" method="updatepwd">
+            <interceptor-ref name="myStack"></interceptor-ref>
+        </action>
+        <!--设备状态查询-->
+        <action name="status" class="device" method="status">
+            <interceptor-ref name="myStack"></interceptor-ref>
+        </action>
+
+        <action name="cloud_device_offLine_main" class="device" method="offLine">
+            <result name="success">jsp/error.jsp</result>
+        </action>
+        <action name="cloud_device_videoIfo_main" class="device" method="videoIfo">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <result name="success">jsp/video.jsp</result>
+        </action>
+        <!--授权-->
+        <action name="open" class="code" method="open"></action>
+        <action name="select" class="code" method="select">
+            <interceptor-ref name="myStack"></interceptor-ref>
+            <result name="success">jsp/code.jsp</result>
+        </action>
+        <action name="codetongbu" class="code" method="codetongbu"></action>
+    </package>
+</struts>

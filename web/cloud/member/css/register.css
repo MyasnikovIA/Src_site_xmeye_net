@@ -1,0 +1,157 @@
+.centerBox {
+    height: 850px;
+}
+
+.register_error {
+    width: 100%;
+    height: 20px;margin-bottom: 20px;
+    font-size: 12px;
+    color: #ef5c5f;
+    text-align: center;
+}
+
+.register_main {
+    width: 740px;
+    /*   height: 650px;*/
+}
+
+.register_main ul {
+    width: 100%;
+    height: 100%;
+}
+
+.register_main ul li:first-child img {
+    width: 123px;
+    height: 123px;
+}
+
+.register_main ul .register_box {
+    width: 598px;
+    position: relative;
+}
+
+.prompt {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.register_table {
+    margin: 20px;
+    font-weight: 600;
+    height: auto;
+    width: 560px !important;
+    color: #165b7a;
+}
+
+.register_table tr {
+    width: 100%;
+    line-height: 25px;
+    height: 25px;
+}
+
+.register_table tr td {
+    height: auto;
+}
+
+.register_table tr .error {
+    display: block;
+    float: right;
+    font-size: 12px;
+    text-align: right;
+    color: #ff3a3c;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.input_bg {
+    width: 559px !important;
+}
+
+.iup3 {
+    background: url("/cloud/member/images/26056/iup3.png") no-repeat left top;
+}
+
+.iup4 {
+    background: url("/cloud/member/images/26056/iup4.png") no-repeat left top;
+}
+
+.iup5 {
+    width: 244px !important;
+    background: url("/cloud/member/images/26056/iup5.png") no-repeat left top;
+}
+
+.r_bg3 {
+    width: 213px !important;
+    background: url("/cloud/member/images/26056/r_bg3.png") no-repeat left top;
+}
+
+.choice_sex {
+    text-align: left;
+    padding-left: 10px;
+    height: 39px;
+    line-height: 39px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    z-index: 102;
+}
+
+.choice_sex:hover {
+    cursor: pointer;
+}
+
+.choice_sex .sex_box {
+    width: 170px;
+    height: 84px;
+    position: absolute;
+    top: 35px;
+    left: 7px;
+    display: none;
+    z-index: 1002 !important;
+}
+
+.click_sex {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210px;
+    display: block;
+    height: 35px;
+}
+
+.choice_sex .sex_box li {
+    text-align: center;
+    width: 166px;
+    height: 40px;
+    line-height: 40px;
+    clear: both;
+    background-color: #14afbe;
+}
+
+.choice_sex .sex_box li:hover {
+    background-color: #1195a2;
+}
+
+.sub_bg3, .btn_bg4 {
+    height: 40px;
+    line-height: 40px;
+}
+
+.sub_bg3 {
+    width: 244px;
+    background: url("/cloud/member/images/26056/btn6.png") no-repeat left top;
+}
+
+.btn_bg4 {
+    width: 144px;
+    margin-left: 43px;
+    background: url("/cloud/member/images/26056/btn7.png") no-repeat left top;
+}
+
+.send_ {
+    height: 100%;
+    height: 40px;
+/*    padding-left: 40px;*/
+    line-height: 40px;
+}

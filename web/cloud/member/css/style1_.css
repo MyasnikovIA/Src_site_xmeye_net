@@ -1,0 +1,270 @@
+/* 全局样式 */
+html {
+    height: 100%
+}
+
+* {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+body {
+    text-align: center;
+    font: 14px/1.5 "微软雅黑";
+    color: white;
+    min-width: 1280px;
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+}
+
+a, img {
+    border: 0;
+    text-decoration: none;
+}
+
+a:link {
+    /* 未访问的链接 */
+    color: #2979c3;
+}
+
+a:visited {
+    /* 已访问的链接 */
+    color: #2979c3;;
+}
+
+a:hover {
+    cursor: pointer;
+    /* 鼠标移动到链接上 */
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:active {
+    /* 选定的链接 */
+    star: expression(this.onfocus=this.blur)); /*IE下去除点击后的间隙*/
+    outline: none; /*火狐下去除点击后的间隙*/
+    color: #2979c3;;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #1b1b1b;
+}
+
+.header_menu {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    background-color: #1b1b1b;
+}
+
+.logo_pic {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.logo_img {
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
+.header_menu ul {
+    width: 80%;
+    float: right;
+}
+
+.header_menu li {
+    width: 11%;
+    color: #2979c3;
+    line-height: 70px;
+    text-align: right;
+    list-style: none;
+    float: right;
+    font-size: 15px;
+}
+
+.user_name {
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 15px;
+}
+
+.center_box {
+    padding-top: 10px;
+    width: 1200px;
+    height: 660px;
+    margin: auto;
+}
+
+.center_left {
+    width: 83%;
+    float: left;
+    border: none;
+}
+
+.footer {
+    clear: both;
+    margin-top: 40px;
+    height: 20px;
+}
+
+.center_left_box {
+    margin: auto;
+    background-color: white;
+}
+
+.center_right {
+    width: 15%;
+    float: right;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid #1b1b1b;
+
+}
+
+.center_right_box {
+    margin: auto;
+}
+
+.refresh {
+    border-bottom: 2px solid #4e4e4e;
+    height: 10%;
+}
+
+.refresh input {
+    star: expression(this.onfocus=this.blur)); /*IE下去除点击时的细边框*/
+    outline: none; /*火狐下去除点击时的细边框*/
+    cursor: pointer;
+    margin-top: 13px;
+    width: 100px;
+    height: 40px;
+}
+
+.scr_con {
+    width: 100%;
+    float: right;
+    margin-top: 10px;
+    height: 575px; /*由center_box - refresh*10% - 2px - 20px的高度取决*/
+}
+
+/* .scrollbar {
+    position: relative;
+    background-position: 0 0;
+    float: right;
+    width: 5%;
+}*/
+
+.viewport {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    SCROLLBAR-FACE-COLOR: #313131; /*滚动条凸出部分的颜色*/
+    SCROLLBAR-HIGHLIGHT-COLOR: #4e4e4e; /* 滚动条空白部分的颜色*/
+    SCROLLBAR-SHADOW-COLOR: #4e4e4e; /* 立体滚动条阴影的颜色*/
+    SCROLLBAR-3DLIGHT-COLOR: #4e4e4e; /* 滚动条亮边的颜色*/
+    SCROLLBAR-ARROW-COLOR: #4e4e4e; /*上下按钮上三角箭头的颜色*/
+    SCROLLBAR-TRACK-COLOR: #4e4e4e; /*滚动条的背景颜色*/
+    SCROLLBAR-DARKSHADOW-COLOR: #4e4e4e; /*滚动条强阴影的颜色*/
+    SCROLLBAR-BASE-COLOR: #4e4e4e; /*滚动条的基本颜色*/
+    position: relative;
+    /*    background-color: white;*/
+}
+
+.viewport_img {
+    float: right;
+    width: 32px;
+    height: 32px;
+}
+
+.viewport li:hover {
+    font-size: 18px;
+    color: #2979c3;
+    border: 2px solid #2979c3;
+    /*  font-size: 17px;
+      text-align: center;*/
+}
+
+.viewport li {
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    width: 96%;
+    height: 34px;;
+    line-height: 34px;
+    /*    background-color: wheat;*/
+}
+
+.viewport li span {
+    margin-left: 5px;
+    width: 50%;
+    height: 100%;
+}
+
+/**弹窗 --star**/
+.alert_content {
+    display: none;
+    position: relative;
+    top: 100px;
+    width: 800px;
+    height: 0;
+    /*弹窗最外层宽度*/
+    margin: auto;
+    background-color: gray;
+    z-index: 101;
+}
+
+.alert_content_box {
+    background-color: white;
+    position: absolute;
+    z-index: 102;
+    border: 1px solid #8a8a8a;
+    height: 500px;
+    /*弹窗次层高度*/
+    margin: auto;
+}
+
+.alert_box_iframe {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+}
+
+#bg_iframe {
+    height: 90%;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.close_ {
+    height: 5%;
+    text-align: right
+}
+
+.alert_close {
+    color: #444;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.alert_close:hover {
+    color: #ff0000;
+}
+
+/**弹窗 --end**/

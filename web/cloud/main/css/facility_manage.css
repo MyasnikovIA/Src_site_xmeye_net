@@ -1,0 +1,285 @@
+/**设备管理--star**/
+html {
+    height: 100%
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+h1 {
+    font-size: 22px;
+
+}
+
+body {
+    font: 14px/1.5 "微软雅黑", arial;
+    color: #444 !important;
+}
+
+.fl {
+    float: left !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.fr {
+    float: right !important;
+}
+
+.clear {
+    clear: both !important;
+}
+
+.btn {
+    border-radius: 3px;
+    margin-top: 20px;
+    padding: 5px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.bg_blue {
+    background-color: #4092da;
+}
+
+.bg_blue:hover {
+    background-color: #3d8ace;
+}
+
+.bg_b3b3b3 {
+    background-color: #b3b3b3;
+}
+
+.bg_b3b3b3:hover {
+    background-color: #a2a2a2;
+}
+
+.bg_000 {
+    background-color: #101010;
+
+}
+
+.bg_000:hover {
+    background-color: #000;
+
+}
+
+.height_26, .input_checkbox, .all_select, .td_index, .add_fac input {
+    /*  text-align: left;*/
+    height: 26px;
+    line-height: 26px
+}
+
+.height_30 {
+    font-weight: bold;
+    /*  text-align: left;*/
+    height: 30px;
+    line-height: 30px
+}
+
+.icon_addFac {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    margin-top: 10px;
+    height: 30px;
+    background: url('/cloud/main/images/iconBox.png') 0 0 no-repeat;
+}
+
+.icon_addFac:hover {
+    background: url('/cloud/main/images/iconBox.png') -30px -191px no-repeat;
+}
+
+.content_box_table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    padding: 0;
+}
+
+thead {
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+th, td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    border-bottom: dotted 1px #e0e0e0;
+    border-left: dotted 1px #e0e0e0;
+}
+
+th:first-child, td:first-child {
+    border-left: none !important;
+}
+
+.content_box_table td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.td_bg {
+    cursor: pointer;
+}
+
+.td_bg:hover {
+    font-weight: bold;
+}
+
+.input_checkbox, .all_select {
+    vertical-align: middle;
+    float: left;
+}
+
+.td_index {
+    margin-left: 10%;
+}
+
+.edit, .delete {
+    cursor: pointer;
+    height: 24px;
+    display: inline-block;
+    width: 24px;
+    margin: 0 10px;
+    border: none;
+}
+
+.icon_edit {
+
+    background: url('/cloud/cloudManage/images/setting.jpg') 0 0 no-repeat;
+}
+
+.icon_delete {
+    background: url('/cloud/cloudManage/images/delete.jpg') 0 0 no-repeat;
+}
+
+/*添加设备——start*/
+.add_fac {
+    width: 80%;
+    margin: auto;
+}
+
+.add_fac table {
+    font-weight: bold;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.add_fac table td {
+    border: none !important;
+}
+
+.add_fac input {
+    font-size: 16px;
+    width: 95%;
+    padding-left: 5%;
+    height: 28px;
+}
+
+.error {
+    border: none;
+    background-color: #f7f7f7;
+    color: #070000;
+}
+
+.fixed_0_0 {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    border: 1px solid gainsboro;
+    display: none;
+    bottom: 0;
+    background-color: #f7f7f7;
+}
+
+.add_ {
+    font-size: 16px;
+    text-align: right;
+    width: 100%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+}
+
+.add_ .add_btn {
+    cursor: pointer;
+    background-color: black !important;
+    color: white;
+    padding: 2px 25px !important;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+.add_ .add_btn:hover {
+    background-color: #101010 !important;
+}
+
+/*添加设备——end*/
+
+.content_box_header {
+    width: 100%;
+    height: 50px;
+    font-weight: bold !important;
+    font-size: 18px;
+    line-height: 50px;
+    background-color: #e6e6e6
+}
+
+.prompt {
+    width: 100%;
+    text-align: center;
+    color: #ff0000;
+
+}
+
+.bottom_button {
+    width: 100%;
+    height: 5%;
+}
+
+.add_button, .delete_button {
+    float: left;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.add_button1:hover, .delete_button:hover {
+    color: #ff0000
+}
+
+.update_input, .add_input1, .add_input2, .add_input3 {
+    /*   font-size: 16px;*/
+    border: none;
+    width: auto;
+    background-color: #fff;
+    text-align: center;
+    text-align: center !important;
+}
+
+.update_input {
+    outline: none;
+    border-color: #fff;
+    text-align: center;
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid silver;
+}
+
+/**设备管理--end**/

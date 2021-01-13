@@ -1,0 +1,51 @@
+input[type="text"], input[type="password"] {
+    height: 25px;
+    line-height: 25px
+}
+
+.register_box {
+    width: 700px;
+    height: auto;
+    margin: 0 auto
+}
+
+.register_table {
+    color: #000
+}
+
+.register_table .input_ {
+    padding-left: 10px;
+    width: 160px
+}
+
+.register_table td {
+    font-size: 16px;
+    text-align: left;
+    padding: 0 10px 0 10px;
+    height: 40px
+}
+
+.send_code {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 25px
+}
+
+.send_code:hover {
+    color: #002268
+}
+
+.operation {
+    width: 40%;
+    height: 60px;
+    float: left;
+    margin-right: 10px !important;
+}
+
+.operation .btn:first-child {
+    margin-right: 20px
+}
+
+.operation .btn:last-child {
+    margin-left: 20px
+}

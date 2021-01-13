@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>NetSuveillance</title>
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript" src="m.jsp"></script>
+
+    <script type="text/javascript"> 
+
+	var g_SoftWareVersion="v";	///< 软件版本信息
+	var g_HardWareVersion="";	///< 硬件版本信息
+	var g_mBuildTime="2011/10/19 13:34:34AM";		///< 软件创建时间
+	var g_SerialNo="0";			///< 设备序列号
+	var g_VideoInChannel=0;	///< 视频输入通道数
+	var g_AlarmInChannel=0;	///< 报警输入通道数
+	var g_AlarmOutChannel=0;	///< 报警输出通道数
+	var g_AudioInChannel=0;	///< 音频输入通道数
+	var g_DigChannel=0;		///<数字通道数
+
+
+ var g_channelNumber=32;
+ var g_user="admin"; 
+ var g_port="554";
+ var g_address =document.location.hostname;
+ var iLanguage=100;
+ var g_passWord="";
+ 
+
+ var g_bSafari=false;
+    </script>
+
+    <script type="text/javascript" src="mt.js"></script>
+     <script type="text/javascript">
+        var Sys = {};
+        var ua = navigator.userAgent.toLowerCase();
+        var s;
+        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+        (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+        (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+        (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+        (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+
+        //以下进行测试
+//         if (Sys.ie) document.write('IE: ' + Sys.ie);
+//         if (Sys.firefox) document.write('Firefox: ' + Sys.firefox);
+//         if (Sys.chrome) document.write('Chrome: ' + Sys.chrome);
+//         if (Sys.opera) document.write('Opera: ' + Sys.opera);
+        if (Sys.safari) 
+        {
+            g_bSafari=true;   
+            /*document.write('Safari: ' + Sys.safari);*/
+        }
+        
+    </script>
+
+    <style type="text/css">
+        *
+        {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: Arial, "宋体";
+        }
+        #yt div
+        {
+            float: left;
+        }
+        #yt a
+        {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            outline: none;
+        }
+        #yt a.y1
+        {
+            background: url(yt1.jpg) no-repeat;
+        }
+        #yt a.y1:hover
+        {
+            background: url(yt11.jpg) no-repeat;
+        }
+        #yt a.y2
+        {
+            background: url(yt2.jpg) no-repeat;
+        }
+        #yt a.y2:hover
+        {
+            background: url(yt21.jpg) no-repeat;
+        }
+        #yt a.y3
+        {
+            background: url(yt3.jpg) no-repeat;
+        }
+        #yt a.y3:hover
+        {
+            background: url(yt31.jpg) no-repeat;
+        }
+        #yt a.y4
+        {
+            background: url(yt4.jpg) no-repeat;
+        }
+        #yt a.y4:hover
+        {
+            background: url(yt41.jpg) no-repeat;
+        }
+        #yt a.y5
+        {
+            background: url(yt5.jpg) no-repeat;
+        }
+        #yt a.y5:hover
+        {
+            background: url(yt51.jpg) no-repeat;
+        }
+        #yt a.y6
+        {
+            background: url(yt6.jpg) no-repeat;
+        }
+        #yt a.y6:hover
+        {
+            background: url(yt61.jpg) no-repeat;
+        }
+        #yt a.y7
+        {
+            background: url(yt7.jpg) no-repeat;
+        }
+        #yt a.y7:hover
+        {
+            background: url(yt71.jpg) no-repeat;
+        }
+        #yt a.y8
+        {
+            background: url(yt8.jpg) no-repeat;
+        }
+        #yt a.y8:hover
+        {
+            background: url(yt81.jpg) no-repeat;
+        }
+        a.yta1
+        {
+            display: block;
+            width: 13px;
+            height: 18px;
+            text-decoration: none;
+            float: right;
+        }
+        a.yta1
+        {
+            background: url(yta1.jpg);
+        }
+        a.yta1:hover
+        {
+            background: url(yta11.jpg);
+        }
+        #yt a.y9
+        {
+            background: url(yt9.jpg) no-repeat;
+        }
+        #yt a.y9:hover
+        {
+            background: url(yt91.jpg) no-repeat;
+        }
+        #yt1 div
+        {
+            float: left;
+        }
+        #yt1 a
+        {
+            display: block;
+            width: 26px;
+            height: 26px;
+            text-decoration: none;
+            outline: none;
+        }
+        #yt1 a.y1
+        {
+            background: url(yt+.gif) no-repeat;
+        }
+        #yt1 a.y1:hover
+        {
+            background: url(yt+1.gif) no-repeat;
+        }
+        #yt1 a.y2
+        {
+            background: url(yt-.gif) no-repeat;
+        }
+        #yt1 a.y2:hover
+        {
+            background: url(yt-1.gif) no-repeat;
+        }
+        #pc div
+        {
+            float: left;
+        }
+        #pc a
+        {
+            display: block;
+            width: 36px;
+            height: 25px;
+            text-decoration: none;
+            outline: none;
+        }
+        #pc a.p0
+        {
+            background: url(full.jpg) no-repeat;
+        }
+        #pc a.p0:hover
+        {
+            background: url(full1.jpg) no-repeat;
+        }
+        #pc a.p1
+        {
+            background: url(1.jpg);
+        }
+        #pc a.p1:hover
+        {
+            background: url(11.jpg);
+        }
+        #pc a.p2
+        {
+            background: url(4.jpg);
+        }
+        #pc a.p2:hover
+        {
+            background: url(41.jpg);
+        }
+        #pc a.p3
+        {
+            background: url(9.jpg);
+        }
+        #pc a.p3:hover
+        {
+            background: url(91.jpg);
+        }
+        #pc a.p4
+        {
+            background: url(16.jpg);
+        }
+        #pc a.p4:hover
+        {
+            background: url(161.jpg);
+        }
+        #pc a.p5
+        {
+            background: url(25.jpg);
+        }
+        #pc a.p5:hover
+        {
+            background: url(251.jpg);
+        }
+        #pc a.p6
+        {
+            background: url(36.jpg);
+        }
+        #pc a.p6:hover
+        {
+            background: url(361.jpg);
+        }
+        #pc a.p7
+        {
+            background: url(startAll.jpg);
+        }
+        #pc a.p7:hover
+        {
+            background: url(startAll1.jpg);
+        }
+        #pc a.p72
+        {
+            background: url(stopAll.jpg);
+        }
+        #pc a.p72:hover
+        {
+            background: url(stopAll1.jpg);
+        }
+        #pc a.p8
+        {
+            background: url(snap.jpg);
+        }
+        #pc a.p8:hover
+        {
+            background: url(snap1.jpg);
+        }
+        #pc a.p9
+        {
+            background: url(recordAll.jpg);
+        }
+        #pc a.p9:hover
+        {
+            background: url(recordAll1.jpg);
+        }
+        #pc a.p92
+        {
+            background: url(stopRecordAll.jpg);
+        }
+        #pc a.p92:hover
+        {
+            background: url(stopRecordAll1.jpg);
+        }
+        #pc a.p10
+        {
+            background: url(audio.jpg) no-repeat;
+        }
+        #pc a.p102
+        {
+            background: url(audio1.jpg) no-repeat;
+        }
+        #playView div
+        {
+            border: thin solid #000000;
+            float: left;
+        }
+        #cl li
+        {
+            display: block;
+            width: auto;
+            height: 22px;
+        }
+        #cl a.subPlay
+        {
+            background: url(subPlay.gif) no-repeat;
+            width: 17px;
+            height: 19px;
+            float: left;
+            cursor: pointer;
+            margin-left: 8px;
+            margin-right: 0px;
+            padding: 0px;
+        }
+        #cl a.noSubPlay
+        {
+            background: url(noSubPlay.gif) no-repeat;
+            width: 17px;
+            height: 19px;
+            float: left;
+            cursor: pointer;
+            margin-left: 8px;
+            margin-right: 0px;
+            padding: 0px;
+        }
+        #cl a.mainPlay
+        {
+            background: url(play.gif) no-repeat;
+            width: 17px;
+            height: 19px;
+            float: left;
+            cursor: pointer;
+            margin-left: 8px;
+            margin-right: 0px;
+            padding: 0px;
+        }
+        #cl a.noMainPlay
+        {
+            background: url(noPlay.gif) no-repeat;
+            width: 17px;
+            height: 19px;
+            float: left;
+            cursor: pointer;
+            margin-left: 8px;
+            margin-right: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body id='body' style="width: 100%; height: 100%; padding: 0px; margin: 0px; top: 0px;
+    position: absolute; background: url(bg.jpg) repeat-x; text-align: center;" oncontextmenu="return false">
+    <div id="MessageBox"></div>
+    <div id='hi' style="width: 280px; height: 180px; z-index: 1000; position: absolute;
+        margin-top: -1999px; margin-left: 500px;">
+        <div style="float: left; width: 7px; height: 30px; background: url(m_dral.gif);">
+        </div>
+        <div style="width: 266px; float: left; height: 30px; background: url(m_dram.gif);">
+        </div>
+        <div style="float: right; width: 7px; height: 30px; background: url(m_drar.gif);">
+        </div>
+        <div style="background-color: RGB(236,233,216); float: left; width: 100%; height: 150px;">
+            <div style="height: 70px; margin-top: 30px; float: left; width: 100%">
+                <div style="width: 100%; float: left; margin-left: 68px; height: 20px;">
+                    <input style="cursor: pointer;float: left; height: 15px; margin-top: 1px;" id='mainAll' type='radio'
+                        checked="checked" name='streamStyle' />
+                    <label id='mainAllText' for='mainAll' style="cursor: pointer;height: 15px; float: left; margin-left: 10px; color: #000000;">
+                        </label></div>
+                <div style="width: 100%; float: left; margin-left: 68px; margin-top: 15px">
+                    <input style="cursor: pointer;float: left; height: 15px; margin-top: 1px;" id='subAll' type='radio'
+                        name='streamStyle' />
+                    <label id='subAllText'  for='subAll'  style="cursor: pointer;height: 15px; float: left; margin-left: 10px; color: #000000;">
+                        </label></div>
+                <!--<div style="width: 100%; float: left; margin-left: 68px; margin-top: 10px" >        
+                    <input  onclick="ClickAutoPromt()" checked="checked" style="cursor: pointer;float: left; height: 15px; margin-top: 1px;" id='autoPrompt' type='checkbox'  />
+                    <label id='autoPromptText'  for='autoPrompt'  style="cursor: pointer;height: 15px; float: left; margin-left: 10px; color: #000000;">
+                       </label></div>-->
+            </div>
+            <div style="margin-top: 55px">
+                <button id='playAllOk' style="width: 72px; cursor: pointer; height: 23px; font-family: 宋体, Arial, Helvetica, sans-serif;
+                    color: #000000; margin-right: 10px;" onclick="ClickHi()">
+                    确定</button>
+                <button id='playAllCancel' style="width: 72px; cursor: pointer; height: 23px; font-family: 宋体, Arial, Helvetica, sans-serif;
+                    color: #000000;" onclick='closeHi()'>
+                    取消</button>
+            </div>
+            <div style="width: 100%; float:left; margin-left: 180px; margin-top: 5px" >        
+                    <input  onclick="ClickAutoPromt()" checked="checked" style="cursor: pointer;float: left; height: 15px; margin-top: 1px;" id='autoPrompt' type='checkbox'  />
+                    <label id='autoPromptText'  for='autoPrompt'  style="cursor: pointer;height: 15px; float: left; margin-left: 10px; color: #000000;">
+                       </label></div>
+        </div>
+    </div>
+    <div id="ma" style="margin: 0px; padding: 0px; width: 100%; height: 31px; background: url('m_inTop.jpg') repeat-x;
+        overflow: hidden; position: relative;">
+        <div id='logout' style="cursor: pointer;background: url(logOut.gif);float:right; margin-right:21%;padding-top:5px;  font-size: 13px; height: 31px; width: 95px; color: #000000;" onclick="Logout()"></div>
+        <div id='version' style="cursor: pointer;background: url(logOut.gif);float:right; margin-right:0px;padding-top:5px;  font-size: 13px; height: 31px; width: 95px; color: #000000;" onclick="Version()"></div>
+    </div>
+    <div id="mb" style="width: 950px; height: 550px; padding: 0; margin: auto;">
+        <div id="mba" style="float: left; height: 100%; width: 140px;">
+            <div style="width: 140px; float: left; height: 100%;">
+                <div id='dra1' style="height: 29px; background: url(m_dram.jpg); position: relative;">
+                    <div style="height: 29px; width: 8px; background: url(m_dral.jpg); float: left">
+                    </div>
+                    <div style="height: 29px; width: 8px; background: url(m_drar.jpg); float: right;
+                        margin: 0 0px 0 0; cursor: move;">
+                    </div>
+                </div>
+                <div id='mbabwrap'>
+                    <div id='mbab' style="margin: 0; width: auto; height: 100%; background: url(mb_bg.jpg) repeat-x;
+                        overflow: auto; padding: 0px; position: relative;">
+                        <ul id='cl' style="margin-top: 20px;">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mbb" style="width: 670px; height: 100%; float: left;">
+            <div id="drb2" style="width: 100%; float: left; height: 29px; background: url(m_dram.jpg);
+                margin: 0 1px 0 1px;">
+                <div style="height: 29px; width: 8px; background: url(m_dral.jpg); float: left">
+                </div>
+                <div style="height: 29px; width: 8px; background: url(m_drar.jpg); float: right;
+                    margin: 0 0 0 0;">
+                </div>
+            </div>
+            <div id='playView' style="border: 1px solid 0; width: 665px; margin: 3px 2px 0 2px;
+                height: 480px; float: left; background-color: #C0C0C0;">
+                <!--AllPlayView-->
+            </div>
+            <div id='funcBar' style="width: 100%; float: left; height: 33px; background: url(plcb11.jpg);
+                margin: 2px 2px 0 2px;">
+                <div style="width: 7px; height: 33px; float: left; background: url(plcbl.jpg);">
+                </div>
+                <div style="width: 7px; height: 33px; float: right; background: url(plcbr.jpg);">
+                </div>
+                <div id='pb' style="height: 26px; margin: 2px 0 0 10px; position: relative;">
+                    <div id='pc'>
+                        <!--  <div style="margin: 0 0 0 0px">
+                                    <a id='xp0' class="p0" href="javascript:;" onclick="ocx.Fullscreen(true)"></a>
+                                </div>-->
+                        <div style="margin: 0 0 0 5px">
+                            <a id='xp1' class="p1" href="javascript:;" onclick="inSetWindow(1)"></a>
+                        </div>
+                        <div style="margin: 0 0 0 5px">
+                            <a id='xp2' class="p2" href="javascript:;" onclick="inSetWindow(4)"></a>
+                        </div>
+                        <div style="margin: 0 0 0 5px">
+                            <a id='xp3' class="p3" href="javascript:;" onclick="inSetWindow(9)"></a>
+                        </div>
+                        <div style="margin: 0 0 0 5px">
+                            <a id='xp4' class="p4" href="javascript:;" onclick="inSetWindow(16)"></a>
+                        </div>
+                        <div style="margin: 0 0 0 5px">
+                            <a id='xp5' class="p5" href="javascript:;" onclick="inSetWindow(25)"></a>
+                        </div>
+                        <div style="margin: 0 0 0 5px;">
+                            <a id='xp6' class="p6" href="javascript:;" onclick="inSetWindow(36)"></a>
+                        </div>
+                        <div style="margin: 0 0 0 5px">
+                            <a id='startPlayAll' class="p7" href="javascript:;" onclick="startPlayAll()"></a>
+                        </div>
+                        <div style="margin: 0 0 0 5px">
+                            <a id='stopPlayAll' class="p72" href="javascript:;" onclick="StopPlayAll()"></a>
+                        </div>
+                        <!--<div style="margin: 0 0 0 5px;">
+                                    <a title='snap' id='snap' class="p8" href="javascript:;" onclick='ocx.BMPCapturePicture("C:\\BMP")'>
+                                    </a>
+                                </div>
+                                <div style="margin: 0 0 0 5px">
+                                    <a id='recordAll' class="p9" href="javascript:;" onclick="recordAll()"></a>
+                                </div>
+                                <div style="margin: 0 0 0 5px">
+                                    <a id='stopRecordAll' class="p92" href="javascript:;" onclick="stopRecordAll()"></a>
+                                </div>
+                                <div style="margin: 0 17px 0 0; float: right">
+                                    <a id='Audio' class="p102" href="javascript:;" onclick="openAudio()"></a>
+                                </div>-->
+                    </div>
+                    <script type="text/javascript">
+                    if(!g_bSafari)
+                    {
+                        $('pc').style.display="none" ;
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+        resizeM();
+        </script>
+
+        <div id="mbc" style="float: right; height: 100%; width: 140px;">
+            <div style="width: 140px; background: url(mb_bg.jpg) repeat-x; float: left; height: 100%;">
+                <div id='dra3' style="height: 29px; background: url(m_dram.jpg); position: relative;">
+                    <div style="height: 29px; width: 8px; background: url(m_dral.jpg); float: left">
+                    </div>
+                    <div style="height: 29px; width: 8px; background: url(m_drar.jpg); float: right;
+                        margin: 0 0px 0 0; cursor: move;">
+                    </div>
+                </div>
+                <div id='yt' style="height: 130px; width: 125px; position: relative; padding: 8px 8px 0 8px">
+                    <div style="width: 40px; height: 35px; padding: 0px 0 0 0px;">
+                        <a class="y1" href="javascript:;" onmousedown="ajaxFunction('start','directionleftup')"
+                            onmouseup="ajaxFunction('stop','directionleftup')"></a>
+                    </div>
+                    <div style="width: 45px; height: 35px; padding: 0px 0 0 0px;">
+                        <a class="y2" href="javascript:;" onmousedown="ajaxFunction('start','directionup')"
+                            onmouseup="ajaxFunction('stop','directionup')"></a>
+                    </div>
+                    <div style="width: 39px; height: 35px; padding: 0px 0 0 0px;">
+                        <a class="y3" href="javascript:;" onmousedown="ajaxFunction('start','directionrightup')"
+                            onmouseup="ajaxFunction('stop','directionrightup')"></a>
+                    </div>
+                    <div style="width: 40px; height: 50px; padding: 0px 0 0 0px;">
+                        <a class="y4" href="javascript:;" onmousedown="ajaxFunction('start','directionleft')"
+                            onmouseup="ajaxFunction('stop','directionleft')"></a>
+                    </div>
+                    <div style="width: 45px; height: 50px;">
+                        <a class="y5" href="javascript:;"></a>
+                    </div>
+                    <div style="width: 39px; height: 50px; padding: 0px 0 0 0px;">
+                        <a class="y6" href="javascript:;" onmousedown="ajaxFunction('start','directionright')"
+                            onmouseup="ajaxFunction('stop','directionright')"></a>
+                    </div>
+                    <div style="width: 40px; height: 45px; padding: 0 0 0 0px;">
+                        <a class="y7" href="javascript:;" onmousedown="ajaxFunction('start','directionleftdown')"
+                            onmouseup="ajaxFunction('stop','directionleftdown')"></a>
+                    </div>
+                    <div style="width: 45px; height: 35px; padding: 0 0 0 0px;">
+                        <a class="y8" href="javascript:;" onmousedown="ajaxFunction('start','directiondown')"
+                            onmouseup="ajaxFunction('stop','directiondown')"></a>
+                    </div>
+                    <div style="width: 39px; height: 35px; padding: 0 0 0 0px;">
+                        <a class="y9" href="javascript:;" onmousedown="ajaxFunction('start','directionrightdown')"
+                            onmouseup="ajaxFunction('stop','directionrightdown')"></a>
+                    </div>
+                </div>
+                <div id='yt1' style="width: 132px; height: 90px; position: relative; margin: 0 5px 0 5px;">
+                    <div style="padding: 0 0 5px 14px;">
+                        <a class="y1" href="javascript:;" onmousedown="ajaxFunction('start','zoomtile')"
+                            onmouseup="ajaxFunction('stop','zoomtile')"></a>
+                    </div>
+                    <div id='xbb' style="color: #FFFFFF; height: 18px; width: 50px; padding: 8px 0 0 0;
+                        text-align: center;">
+                        </div>
+                    <div style="padding: 0 0 5px 0;">
+                        <a class="y2" href="javascript:;" onmousedown="ajaxFunction('start','zoomwide')"
+                            onmouseup="ajaxFunction('stop','zoomwide')"></a>
+                    </div>
+                    <div style="padding: 0 0 5px 14px;">
+                        <a class="y1" href="javascript:;" onmousedown="ajaxFunction('start','focusnear')"
+                            onmouseup="ajaxFunction('stop','focusnear')"></a>
+                    </div>
+                    <div id='xbj' style="color: #FFFFFF; height: 18px; width: 50px; padding: 8px 0 0 0;
+                        text-align: center;">
+                        </div>
+                    <div style="padding: 0 0 5px 0;">
+                        <a class="y2" href="javascript:;" onmousedown="ajaxFunction('start','focusfar')"
+                            onmouseup="ajaxFunction('stop','focusfar')"></a>
+                    </div>
+                    <div style="padding: 0 0 5px 14px;">
+                        <a class="y1" href="javascript:;" onmousedown="ajaxFunction('start','irislarge')"
+                            onmouseup="ajaxFunction('stop','irislarge')"></a>
+                    </div>
+                    <div id='xgq' style="color: #FFFFFF; height: 18px; width: 50px; padding: 8px 0 0 0;
+                        text-align: center;">
+                        </div>
+                    <div style="padding: 0 0 5px 0;">
+                        <a class="y2" href="javascript:;" onmousedown="ajaxFunction('start','irissmall')"
+                            onmouseup="ajaxFunction('stop','irissmall')"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mc" style="clear: both; height: 13px; text-align: center; background: url(mc.jpg) repeat-x;">
+        CopyRight 2011,All Rights Reserved
+    </div>
+    <div style="position: absolute; top: -2000px; width: 0px;">
+        <a style="background: url(yt11.jpg)"></a><a style="background: url(yt21.jpg)"></a>
+        <a style="background: url(yt31.jpg)"></a><a style="background: url(yt41.jpg)"></a>
+        <a style="background: url(yt51.jpg)"></a><a style="background: url(yt61.jpg)"></a>
+        <a style="background: url(yt71.jpg)"></a><a style="background: url(yt81.jpg)"></a>
+        <a style="background: url(yt91.jpg)"></a><a style="background: url(yt+1.gif)"></a>
+        <a style="background: url(yt-1.gif)"></a><a style="background: url(stopAll1.jpg)">
+        </a><a style="background: url(startAll1.jpg)"></a><a style="background: url(11.jpg)">
+        </a><a style="background: url(41.jpg)"></a><a style="background: url(91.jpg)"></a>
+        <a style="background: url(161.jpg)"></a><a style="background: url(251.jpg)"></a>
+        <a style="background: url(361.jpg)"></a>
+    </div>
+</body>
+</html>

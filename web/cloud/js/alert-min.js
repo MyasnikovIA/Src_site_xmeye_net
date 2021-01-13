@@ -1,0 +1,1 @@
+function alert_info(f,e,a){alert(e);var c;var d;var b;if(a){c=_parent("#DialogTitle");d=_parent("#DialogMessage");b=_parent("#Dialog")}else{c=$("#DialogTitle");d=$("#DialogMessage");b=$("#Dialog")}c.text(f);d.text(e);b.show()}function hide_Dialog(){$("#Dialog").hide()}function _parent(a){return $("body",parent.document).find(a)};

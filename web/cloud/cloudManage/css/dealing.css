@@ -1,0 +1,40 @@
+body{
+    width: auto;
+    height: auto;
+}
+* {
+    padding: 0;
+    list-style-type: none;
+}
+table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    padding: 0;
+}
+
+thead {
+    background-color: #f9f9f9;
+    color: #444!important;
+    font-size: 14px;
+}
+
+th, td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    border-bottom: dotted 1px #e0e0e0;
+    border-left: dotted 1px #e0e0e0;
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+table td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+a {
+    text-decoration: none;
+}

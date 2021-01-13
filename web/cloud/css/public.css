@@ -1,0 +1,203 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font: 14px/1.5 "微软雅黑", arial;
+    color: #444;
+}
+
+h1 {
+    font-size: 22px;
+
+}
+
+/*table样式 --star*/
+thead {
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+th, td {
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    border-bottom: dotted 1px #e0e0e0;
+    border-left: dotted 1px #e0e0e0;
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+td:first-child, th:first-child {
+    border-left: none;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+/*table样式 --end*/
+/*分页--star*/
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#pagelist {
+    position: fixed;
+    bottom: 0;
+    width: 96%;
+    padding: 10px 2%;
+    text-align: center;
+    background-color: #f9f9f9;
+
+}
+
+#pagelist ul {
+    position: relative;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: inline-block;
+    /* margin: 0 auto;*/
+    list-style: none;
+    /*  background-color: dodgerblue;*/
+}
+
+#pagelist li {
+    cursor: pointer;
+    border-radius: 3px;
+    color: #444;
+    font-size: 14px;
+    margin-left: 5px;
+    float: left;
+    border: 1px solid #5d9cdf;
+    height: 20px;
+    line-height: 20px;
+
+}
+
+/*#home_page,#up_page,#pg1,#pg2,#pg3,#pg4,#pg5*/
+.go_button {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: medium none;
+    outline-style: none;
+    outline-color: invert;
+    outline-width: medium;
+    background-color: white;
+}
+
+#pagelist ul li, .pageinfo {
+    display: block;
+    padding: 0px 6px;
+}
+
+#pagelist ul li:last-child {
+    padding: 0px;
+}
+
+.pg_sum, .number_sum {
+    font-weight: 400;
+    color: dodgerblue;
+    padding: 0 4px
+}
+
+#go_page:hover {
+    color: dodgerblue;
+}
+
+.Page_error {
+    display: none;
+    border: none;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    color: #ff0000;
+    font-size: 14px;
+}
+
+.pageinfo {
+    color: #000000;
+}
+
+.cursor {
+    cursor: pointer
+}
+
+#Pglist {
+    padding: 0 !important;
+    border: none !important;
+}
+
+#pg_list {
+
+    background-color: lightgray
+}
+
+
+
+.page_number {
+    text-align: center;
+    font-weight: 400;
+    color: dodgerblue;
+    width: 35px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid dimgrey;;
+    height: 15px;
+}
+
+#home_page:hover, #up_page:hover, #next_page:hover, #end_page:hover {
+    color: dodgerblue
+}
+
+#pg1, #pg2, #pg3, #pg4, #pg5 {
+    text-align: center;
+    /* width: 15px;*/
+    display: none;
+}
+
+.current {
+    background: lightblue;
+    display: block;
+    padding: 0 6px;
+    font-weight: bold;
+}
+
+.search {
+    width: 150px;
+    height: 14px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none !important;
+    background-color: #f9f9f9;
+    color: #808080;
+    outline: none;
+    padding-left: 5px;
+}
+
+.search_text {
+    color: #444;
+    display: none;
+}
+
+/*分页--end*/

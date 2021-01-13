@@ -1,0 +1,697 @@
+@charset "utf-8";
+/* 全局样式 */
+html {
+    width: 100%;
+    height: 100%
+}
+
+body {
+    /*    min-height: 800px;*/
+    text-align: center;
+    font-size: 16px;
+    font-family: "微软雅黑", Arial;
+    color: #666;
+    background: #ffffff;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+body div {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+ul {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+table {
+    vertical-align: middle;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+tbody {
+    margin: 0;
+    padding: 0;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    color: #666;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #da251c;
+}
+
+a:active {
+    star: expression(this.onFocus=this.blur());
+}
+
+a img {
+    border: 0 solid #ffffff;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+image {
+    vertical-align: middle;
+    border: 0;
+}
+
+table {
+    /* width: 100%;*/
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.cusPoint {
+    cursor: pointer;
+}
+
+.a_4092da {
+    color: #4092da !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+#header {
+    color: #3272b0;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: url("/cloud/main/images/headerbg-0.png") 0 0 repeat;
+    /*background-color: #252525;*/
+    z-index: 999;
+}
+
+#header .personalBox {
+    position: absolute;
+    right: 28px;
+    top: 0;
+    padding-top: 50px;
+    min-width: 40px;
+    height: auto;
+    overflow: auto;
+    z-index: 998;
+    display: none;
+    color: #d8d8d8;
+    /*    background-color: #252525;*/
+}
+
+#header .personalBox ul {
+    background-color: #252525;
+}
+
+#header .personalBox .on {
+    color: #fff !important;
+    background-color: #000;
+}
+
+#header .personalBox ul li {
+    width: auto;
+    padding: 0 25px;
+    background-color: #252525;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px !important;
+    color: #d8d8d8;
+    line-height: 30px;
+}
+
+#header .personalBox ul li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#header .personalBox ul li:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#header table, #header table tr {
+    width: 100%;
+    height: 50px
+}
+
+#header .logo {
+    width: 118px;
+    height: 42px;
+    background: url("/cloud/member/images/logo.png") no-repeat;
+}
+
+#header .icon {
+    position: absolute;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    width: 299px;
+    z-index: 1;
+    height: 50px;
+    right: 0;
+    top: 0;
+    background: url("/cloud/member/images/iconHeader2.png") no-repeat;
+}
+
+#header .layout_right {
+    opacity: 1;
+    cursor: pointer;
+    filter: alpha(opacity=100);
+    padding: 0;
+    height: 50px;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    font-size: 14px !important;
+    line-height: 50px;
+    z-index: 99;
+    width: 200px;
+    color: #d8d8d8;
+}
+
+#header .layout_right .userExit {
+    width: 20px !important;
+    height: 20px !important;
+    margin-top: 15px;
+    background: url("/cloud/main/images/Exit.png") no-repeat;
+}
+
+#header .layout_right .userExit:hover {
+    background-position: -44px 0;
+}
+
+#header .layout_right .inforBox {
+    text-align: right;
+    overflow: hidden !important;
+}
+#header .layout_right a:hover {
+    color: red;
+
+}
+
+#header .layout_right .on {
+    color: red;
+}
+
+#header .on {
+    color: #fff;
+}
+
+#header .layout_right b {
+    color: #fff;
+    padding: 0 7px;
+    font-weight: normal;
+}
+
+#header .layout_right a {
+    color: #fff;
+}
+
+#menuBox {
+    z-index: 99999;
+    padding-left: 20px;
+}
+
+#menuBox .menuBox {
+    width: auto;
+    height: 100%;
+}
+
+#menuBox .menuBox li {
+    float: left;
+    color: #d8d8d8;
+    line-height: 50px;
+    text-align: right;
+    list-style: none;
+    font-size: 15px;
+}
+
+#menuBox .menuBox li a {
+    color: #d8d8d8;
+}
+
+#menuBox .menuBox li:hover {
+    background: url("/cloud/main/images/headerbg-1.png") 0 0 repeat;
+}
+
+#menuBox .menuBox li:hover a {
+    color: #fff;
+}
+
+#menuBox .menuBox .on {
+    text-shadow: 0 1px 1px #fff;
+    background: url("/cloud/main/images/headerbg-1.png") 0 0 repeat;
+}
+
+#menuBox .menuBox .on a {
+    color: #fff !important;
+}
+
+#menuBox .menuBox li a {
+    padding: 5px 20px;
+}
+
+.user_name {
+    color: #444;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 15px;
+}
+
+.center_box {
+    width: 100%;
+    border-bottom: 1px solid silver;
+    width: 100% !important;
+
+}
+
+.center_left {
+    width: auto;
+    min-width: 14px;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    position: relative;
+    border-right: 1px solid silver;
+}
+
+.center_left .center_left_box {
+    width: 200px;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.center_left .switchBox_off {
+    width: 14px;
+    height: 160px;
+    position: absolute;
+    left: 0;
+    display: none;
+    top: 50%;
+    margin-top: -80px;
+    font-size: 26px !important;
+    line-height: 10px;
+    text-align: center;
+    color: silver;
+}
+
+.center_left .switchBox {
+    position: absolute;
+    top: 0;
+    right: -14px;
+    width: 14px;
+    height: 100%;
+}
+
+.center_left .show_switch {
+    width: 14px;
+    height: 72px;
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    cursor: pointer;
+    margin-top: -36px;
+    background: url('/cloud/main/images/iconBox.png') 0 0 no-repeat;
+}
+
+.center_left .on {
+    background-position: 0 -30px;
+}
+
+.center_left .on:hover {
+    background-position: 0 -159px;
+}
+
+.center_left .off {
+    background-position: -14px -30px;
+}
+
+.center_left .off:hover {
+    background-position: -14px -159px;
+}
+
+.fixed_bottom {
+    position: fixed;
+    left: 0 !important;
+    bottom: 0 !important;
+}
+
+.footer {
+    text-align: center;
+    height: 30px;
+    z-index: 1;
+    line-height: 30px;
+    width: 100%;
+}
+
+.footer span {
+    display: block;
+    font-size: 13px;
+    /*color: #4878a9;*/
+    color: #a2a2a2;
+
+}
+
+.center_right_box {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+.center_right {
+    height: 100%;
+    float: right;
+}
+
+.center_right_box {
+    margin: auto;
+}
+
+#center_iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#center_iframe_alert {
+    width: 100%;
+    height: 100%;
+    display: none
+}
+
+.refresh {
+    height: 40px;
+    overflow: hidden !important;
+    width: 100%;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    background-color: #dadada;
+    position: relative;
+}
+
+.refresh:hover {
+    color: #fff;
+    background-color: #bebebe;
+}
+
+.refresh .refreshBtn {
+    display: inline-block;
+    width: 26px;
+    cursor: pointer;
+    margin-left: 10px;
+    vertical-align: middle;
+    height: 26px;
+    background: url('/cloud/main/images/iconBox.png') -30px -30px no-repeat;
+}
+
+.scr_con {
+    width: 100%;
+    height: 100%;
+}
+
+.deviceList, .cloudShare {
+    background-color: #f2f2f2;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+
+    position: relative;
+}
+
+.cloudShare {
+    display: none;
+    padding: 10px 0;
+    height: auto !important;
+}
+
+.viewport .deviceList {
+    width: 100%;
+    padding: 0;
+}
+
+.viewport_img {
+    float: right;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.v_li_back {
+    color: #fff !important;
+    background-color: #808080 !important;
+}
+
+.viewport li, .cloudShare li {
+    text-align: left;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    border-bottom: 1px solid #e2e2e2;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.cloudShare li {
+    text-align: center
+}
+
+.viewport li:hover, .cloudShare li:hover {
+    background-color: #e2e2e2;
+}
+
+.viewport li span, .cloudShare li span {
+    float: left;
+    margin-left: 5px;
+    width: 50%;
+    height: 100%;
+}
+
+/**弹窗 --star**/
+#bg {
+    display: none;
+    background-color: #000000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1280px;
+    height: 100%;
+
+}
+
+.alert_content {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -280px;
+    margin-left: -400px;
+    /*弹窗最外层宽度*/
+    z-index: 101;
+}
+
+.alert_box_iframe {
+    width: 100%;
+    height: 100%;
+    padding: 36px;
+    background-color: #fff;
+    position: relative;
+
+}
+
+#bg_iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.alert_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    color: #444;
+    float: right;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.alert_close:hover {
+    color: #fff;
+    background-color: #f25561;
+}
+
+/**弹窗 --end**/
+/*弹窗提示*/
+#Dialog {
+    width: 360px;
+    display: none;
+    margin-left: -180px;
+    border: 1px solid silver;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px #161718;
+    -moz-box-shadow: 0 1px 3px #161718;
+    -webkit-box-shadow: 0 1px 3px #161718;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    background-color: #fff;
+    z-index: 9999999999;
+    color: #666;
+}
+
+#Dialog .dialogBOX {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+#Dialog .dialogBOX .Dialog-Title {
+    width: 340px;
+    padding: 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #e3e3e3;
+
+}
+
+#Dialog .dialogBOX .Dialog-Title .Dialog-tips {
+    width: 320px;
+    font-weight: inherit;
+}
+
+#Dialog .dialogBOX .Dialog-Title .Dialog-close {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    border: 1px solid gray;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: 微软雅黑;
+    color: black;
+    background-color: rgb(221, 221, 221);
+}
+
+#Dialog .dialogBOX .Dialog-Title .Dialog-close:hover {
+    background-color: #fff;
+}
+
+#Dialog .dialogBOX .Dialog-main {
+    width: 340px;
+    padding: 30px 10px;
+    background-color: #fff;
+    min-height: 20px;
+
+}
+
+#Dialog .dialogBOX .Dialog-bottom {
+    width: 340px;
+    padding: 10px;
+    height: 23px;
+    border-top: 1px solid #e3e3e3;
+    background-color: #fff;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+#Dialog .dialogBOX .Dialog-bottom .btn {
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#Dialog .dialogBOX .Dialog-bottom .bg_blue {
+    background-color: #4c82f3;
+    color: #fff;
+}
+
+#Dialog .dialogBOX .Dialog-bottom .bg_blue:hover {
+    background-color: #4974e3;
+}
+
+#Dialog .dialogBOX .Dialog-bottom .bg_ccc {
+    background-color: #cccccc;
+    color: #444;
+}
+
+#Dialog .dialogBOX .Dialog-bottom .bg_ccc:hover {
+    background-color: #bababa;
+}
+
+/*弹窗提示*/
